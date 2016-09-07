@@ -135,7 +135,6 @@
 				TargetAttributes = {
 					A9CF5CFE1D7FDD5000015915 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = QAARG72Z56;
 					};
 				};
 			};
@@ -340,12 +339,13 @@
 			baseConfigurationReference = 081A5C3F243C9FF5D0229B38 /* Pods-TestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Mundra (844QDN74U4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -354,12 +354,13 @@
 			baseConfigurationReference = 6C52CB912AF3777FCF25EEBA /* Pods-TestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Mundra (844QDN74U4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
