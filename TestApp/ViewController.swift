@@ -16,8 +16,17 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        self.showAnAlert()
+    }
+    
+    
+    @IBAction func btnTapped(sender : UIButton) -> Void {
+        self.showAnAlert()
+    }
+    
+    func showAnAlert() -> Void {
         let alert = UIAlertController(title: "Alert", message: "Hello ashwin this build is seems okay up to now", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
