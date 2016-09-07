@@ -340,7 +340,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
 			};
 			name = Debug;
 		};
@@ -354,7 +354,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
 			};
 			name = Release;
 		};
