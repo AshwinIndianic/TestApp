@@ -137,7 +137,6 @@
 				TargetAttributes = {
 					A9CF5CFE1D7FDD5000015915 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7BCW99KL8P;
 						SystemCapabilities = {
 							com.apple.OMC = {
 								enabled = 1;
@@ -353,6 +352,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.ApplePay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "42b9c020-68e4-477d-beb1-b2a56927883c";
 			};
 			name = Debug;
 		};
@@ -367,6 +367,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.ApplePay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "42b9c020-68e4-477d-beb1-b2a56927883c";
 			};
 			name = Release;
 		};
