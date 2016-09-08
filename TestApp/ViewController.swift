@@ -57,7 +57,7 @@ class ViewController: UIViewController,BTDropInViewControllerDelegate {
 
     
     func dropInViewController(viewController: BTDropInViewController, didSucceedWithTokenization paymentMethodNonce: BTPaymentMethodNonce) {
-        postNonceToServer(paymentMethodNonce.nonce)
+//        postNonceToServer(paymentMethodNonce.nonce)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -82,7 +82,7 @@ class ViewController: UIViewController,BTDropInViewControllerDelegate {
         // In this example, we wrap it in a new, modally-presented navigation controller:
         dropInViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.Cancel,
-            target: self, action: #selector(MyViewController.userDidCancelPayment))
+            target: self, action: #selector(ViewController.userDidCancelPayment))
         let navigationController = UINavigationController(rootViewController: dropInViewController)
         presentViewController(navigationController, animated: true, completion: nil)
     }
