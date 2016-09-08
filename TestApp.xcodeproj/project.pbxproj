@@ -349,9 +349,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Mundra (844QDN74U4)";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.ApplePay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TeatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c558d2d9-5bc3-4d3d-9475-b1fc6a83de9b";
+				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
 			};
 			name = Debug;
 		};
@@ -363,9 +363,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Sandeep Mundra (844QDN74U4)";
 				INFOPLIST_FILE = TestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.ApplePay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TeatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c558d2d9-5bc3-4d3d-9475-b1fc6a83de9b";
+				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
 			};
 			name = Release;
 		};
