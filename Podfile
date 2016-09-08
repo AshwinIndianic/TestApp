@@ -7,5 +7,7 @@ target 'TestApp' do
 pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'Braintree'
+pod 'Braintree/Apple-Pay'
+pod 'Braintree/Card'
 end
 

@@ -19,6 +19,8 @@ PODS:
     - Braintree/Core (= 4.5.0)
     - Braintree/PayPal (= 4.5.0)
     - Braintree/UI (= 4.5.0)
+  - Braintree/Apple-Pay (4.5.0):
+    - Braintree/Core
   - Braintree/Card (4.5.0):
     - Braintree/Core
   - Braintree/Core (4.5.0)
@@ -41,6 +43,8 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Braintree
+  - Braintree/Apple-Pay
+  - Braintree/Card
   - SVProgressHUD
 
 SPEC CHECKSUMS:

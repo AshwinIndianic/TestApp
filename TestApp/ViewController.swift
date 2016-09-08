@@ -8,11 +8,30 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,BTDropInViewControllerDelegate {
 
+    var braintreeClient: BTAPIClient?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let clientTokenURL = NSURL(string: "https://braintree-sample-merchant.herokuapp.com/client_token")!
+        let clientTokenRequest = NSMutableURLRequest(URL: clientTokenURL)
+        clientTokenRequest.setValue("text/plain", forHTTPHeaderField: "Accept")
+        
+        NSURLSession.sharedSession().dataTaskWithRequest(clientTokenRequest) { (data, response, error) -> Void in
+            // TODO: Handle errors
+//            NSLog("Data %@", data!)
+//            NSLog("response %@", response!)
+            
+            let clientToken = String(data: data!, encoding: NSUTF8StringEncoding)
+//            NSLog("clientToken %@", clientToken!)
+            self.braintreeClient = BTAPIClient(authorization: clientToken!)
+            // As an example, you may wish to present our Drop-in UI at this point.
+            // Continue to the next section to learn more...
+            }.resume()
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -21,7 +40,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func btnTapped(sender : UIButton) -> Void {
-        self.showAnAlert()
+//        self.showAnAlert()
+        self.tappedMyPayButton()
     }
     
     func showAnAlert() -> Void {
@@ -35,6 +55,44 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    func dropInViewController(viewController: BTDropInViewController, didSucceedWithTokenization paymentMethodNonce: BTPaymentMethodNonce) {
+        postNonceToServer(paymentMethodNonce.nonce)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func dropInViewControllerDidCancel(viewController: BTDropInViewController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func tappedMyPayButton() {
+        
+        // If you haven't already, create and retain a `BTAPIClient` instance with a
+        // tokenization key OR a client token from your server.
+        // Typically, you only need to do this once per session.
+        // braintreeClient = BTAPIClient(authorization: CLIENT_AUTHORIZATION)
+        
+        // Create a BTDropInViewController
+        let dropInViewController = BTDropInViewController(APIClient: braintreeClient!)
+        dropInViewController.delegate = self
+        
+        // This is where you might want to customize your view controller (see below)
+        
+        // The way you present your BTDropInViewController instance is up to you.
+        // In this example, we wrap it in a new, modally-presented navigation controller:
+        dropInViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: UIBarButtonSystemItem.Cancel,
+            target: self, action: #selector(MyViewController.userDidCancelPayment))
+        let navigationController = UINavigationController(rootViewController: dropInViewController)
+        presentViewController(navigationController, animated: true, completion: nil)
+    }
+    
+    func userDidCancelPayment() {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    
 
 }
 

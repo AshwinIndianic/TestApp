@@ -28,6 +28,7 @@
 		A9CF5D0E1D7FDD5000015915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9CF5D1A1D7FE32800015915 /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
 		A9CF5D1C1D7FE32800015915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9D4E89A1D81687300A33F6A /* TestApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBC3FA3BC29E44D5F931BB17 /* libPods-TestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +90,7 @@
 				A9CF5D091D7FDD5000015915 /* Assets.xcassets */,
 				A9CF5D0B1D7FDD5000015915 /* LaunchScreen.storyboard */,
 				A9CF5D0E1D7FDD5000015915 /* Info.plist */,
+				A9D4E89A1D81687300A33F6A /* TestApp-Bridging-Header.h */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -352,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TeatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApp/TestApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -366,6 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.indianic.TeatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "42ac22bf-ef1e-434e-baa0-a9d6811f00d5";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestApp/TestApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
