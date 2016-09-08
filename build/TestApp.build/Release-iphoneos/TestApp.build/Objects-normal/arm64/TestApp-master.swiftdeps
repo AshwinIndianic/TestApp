@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "ca93399bcf2a2bd394499bedff5eb48d"
+build_time: [526555579, 67498000]
+inputs:
+  "/Users/indianic/Desktop/SelfStudy/GIT/TestApp/TestApp/ViewController.swift": [526554005, 0]
+  "/Users/indianic/Desktop/SelfStudy/GIT/TestApp/TestApp/AppDelegate.swift": [526544425, 0]

@@ -14,14 +14,38 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Braintree (4.5.0):
+    - Braintree/Card (= 4.5.0)
+    - Braintree/Core (= 4.5.0)
+    - Braintree/PayPal (= 4.5.0)
+    - Braintree/UI (= 4.5.0)
+  - Braintree/Card (4.5.0):
+    - Braintree/Core
+  - Braintree/Core (4.5.0)
+  - Braintree/PayPal (4.5.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.5.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.5.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.5.0)
+  - Braintree/UI (4.5.0):
+    - Braintree/Card
+    - Braintree/Core
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking
+  - Braintree
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Braintree: 7bcebecbcfe5210ed4438a97638c230d2521b54d
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
 COCOAPODS: 0.39.0

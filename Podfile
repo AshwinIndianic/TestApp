@@ -6,5 +6,6 @@
 target 'TestApp' do
 pod 'AFNetworking'
 pod 'SVProgressHUD'
+pod 'Braintree'
 end
 
