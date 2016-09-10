@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         NSLog("Hello ashwin")
+        BTAppSwitch.setReturnURLScheme("com.your-company.Your-App.payments")
         return true
     }
 
@@ -42,13 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        print("###### URL : ")
-        print(url)
-        print("###### App : ")
-        print(app)
-        print(options["UIApplicationOpenURLOptionsSourceApplicationKey"])
-        return true;
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        if url.scheme.localizedCaseInsensitiveCompare("com.your-company.Your-App.payments") == .OrderedSame {
+            return BTAppSwitch.handleOpenURL(url, sourceApplication:sourceApplication)
+        }
+        return false
     }
 
 }

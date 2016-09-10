@@ -55,9 +55,22 @@ class ViewController: UIViewController,BTDropInViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func postNonceToServer(paymentMethodNonce: String) {
+        let paymentURL = NSURL(string: "https://your-server.example.com/payment-methods")!
+        let request = NSMutableURLRequest(URL: paymentURL)
+        request.HTTPBody = "payment_method_nonce=\(paymentMethodNonce)".dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPMethod = "POST"
+        
+        NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+            // TODO: Handle success or failure
+//            NSLog("Data %@", data!)
+//            NSLog("response %@", response!)
+            print(error)
+            }.resume()
+    }
     
     func dropInViewController(viewController: BTDropInViewController, didSucceedWithTokenization paymentMethodNonce: BTPaymentMethodNonce) {
-//        postNonceToServer(paymentMethodNonce.nonce)
+        postNonceToServer(paymentMethodNonce.nonce)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
